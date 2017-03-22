@@ -1,0 +1,53 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Flashlight\"><param name=\"android-package\" value=\"nl.xservices.plugins.Flashlight\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "org.myapp.sample"
+        },
+        "cordova-plugin-flashlight": {
+            "PACKAGE_NAME": "org.myapp.sample"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-flashlight.Flashlight",
+            "file": "plugins/cordova-plugin-flashlight/www/Flashlight.js",
+            "pluginId": "cordova-plugin-flashlight",
+            "clobbers": [
+                "window.plugins.flashlight"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-compat": "1.1.0",
+        "cordova-plugin-flashlight": "3.2.0"
+    }
+}
